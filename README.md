@@ -13,8 +13,6 @@ Todo (4/10):
 ❌ Private graphics
 ❌ Animations
 
-
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All images taken from www.svgrepo.com and adjusted thematically to the app under Creative Commons BY 4.0
