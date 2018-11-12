@@ -3,11 +3,15 @@ import './Body.css';
 import Timer from '../Timer/Timer';
 import PlayPauseBar from '../PlayPauseBar/PlayPauseBar';
 import PomodoroBreakBar from '../PomodoroBreakBar/PomodoroBreakBar';
+import Image from '../Image/Image';
 
-const Body = ({clock, play, pause, reset}) => {
+const Body = ({clock, play, pause, reset, changeTime}) => {
     return (
-      	<div>
-      		<PomodoroBreakBar/>
+      	<div className="body">
+      		<PomodoroBreakBar
+            changeTime={changeTime}
+          />
+          <Image/>
       		<Timer
 	        	clock={clock}
         	/>

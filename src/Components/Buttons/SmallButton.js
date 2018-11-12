@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './BigButton.css';
+import './SmallButton.css';
 
 const Button = ({buttonType, onClick}) => {
     return (
-      	<button 
-      		className='headerButton' 
-      		type='button' 
-      		onClick={onClick}>
-      			{buttonType}
-      		</button>
+      	<img
+      		className='smallButton'
+      		onClick={onClick}
+      		src={`${buttonType}.svg`}
+      		alt={`${buttonType} button`}>
+      	</img>
     );
 }
 

@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import './BigButton.css';
 
-const Button = ({buttonType}) => {
+const Button = ({buttonType, changeTime, value}) => {
+
     return (
-      	<button className='headerButton' type='button'>{buttonType}</button>
+      	<button 
+      		className='bigButton' 
+      		type='button'
+      		onClick={changeTime}
+      		value={value}>
+      			{buttonType}
+      		</button>
     );
 }
 

@@ -23,7 +23,7 @@ class App extends Component {
 	}
 
 	runClock = () => {
-		let {clock, isRunning} = this.state;
+		let {clock} = this.state;
 		if (clock[0] !== '0' && clock[1] === '0' && clock[2] === '0' && clock[3] === '0'){
 			this.setState({clock: `${clock[0]-1}959`});
 		} else if (clock[1] !== '0' && clock[2] === '0' && clock[3] === '0'){
@@ -33,6 +33,12 @@ class App extends Component {
 		} else if (clock[3] !== '0'){
 			this.setState({clock: `${clock[0]}${clock[1]}${clock[2]}${clock[3]-1}`});
 		} 
+	}
+
+	changeTime = (event) => {
+		this.setState({timeSet: event.target.value});
+		this.setState({clock: event.target.value});
+		this.pause();
 	}
 
 	constructor() {
@@ -47,12 +53,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header/ >
+        <Header/>
         <Body 
         	clock={this.state.clock}
         	play={this.play}
         	pause={this.pause}
         	reset={this.reset}
+        	changeTime={this.changeTime}
         />
       </div>
     );

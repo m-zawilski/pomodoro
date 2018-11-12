@@ -1,0 +1,26 @@
+.smallButton {
+	width: 50px;
+	height: 50px;
+	margin: .3em;
+	outline: none;
+	transition: all .2s;
+}
+
+.smallButton:hover {
+	animation: pound 3s infinite;
+	animation-delay: 1s;
+}
+
+@keyframes pound {
+	0%, 50% {
+    transform: scale(1);
+	}
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  12.5%, 37.5% {
+    transform: scale(1.2);
+  }
+}
