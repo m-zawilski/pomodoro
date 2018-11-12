@@ -8,8 +8,8 @@ const Header =  () => {
       <div className='header'>
         <Logo/ >
         <div className='rightButtons'>
-        	<BigButton buttonType='settings'/ >
-        	<BigButton buttonType='about'/ >
+        	<BigButton buttonType='Settings'/ >
+        	<BigButton buttonType='About'/ >
         </div>
       </div>
     );

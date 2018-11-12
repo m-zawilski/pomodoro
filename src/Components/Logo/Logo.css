@@ -1,3 +1,11 @@
-.logo {
-	margin: 0;
+.logoImage {
+	height: 30px;
+	width: 30px;
+	margin-right: .5em;
+	translate: 0px 5px;
+	margin-bottom: -5px;
+}
+
+h1 {
+	font-size: 1.2em;
 }
