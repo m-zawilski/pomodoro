@@ -1,0 +1,23 @@
+.settingsView {
+	height: 300px;
+	width: 200px;
+	z-index: 1;
+	background-color: #070;
+	margin: auto auto;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 1em;
+	box-shadow: #000 1px 1px 5px;
+}
+
+p {
+	margin-bottom: 8px;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

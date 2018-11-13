@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import './Header.css';
 import Logo from '../Logo/Logo';
-import BigButton from '../Buttons/BigButton';
+import HeaderButton from '../Buttons/HeaderButton';
 
-const Header =  () => {
+const Header = ({openSettings}) => {
     return (
       <div className='header'>
-        <Logo/ >
+        <Logo/>
         <div className='rightButtons'>
-        	<BigButton buttonType='Settings'/ >
-        	<BigButton buttonType='About'/ >
+        	<HeaderButton 
+        		buttonType='Settings'
+        		onClick={openSettings}
+        	/>
+        	<HeaderButton 
+        		buttonType='About'
+        	/>
         </div>
       </div>
     );
