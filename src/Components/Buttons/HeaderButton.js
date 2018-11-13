@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import './BigButton.css';
+import './HeaderButton.css';
 
-const BigButton = ({buttonType, changeTime, value}) => {
+const HeaderButton = ({buttonType, onClick}) => {
     return (
       	<button 
       		className='bigButton' 
       		type='button'
-      		onClick={changeTime}
-      		value={value}>
+      		onClick={onClick}
+      		>
       			{buttonType}
       		</button>
     );
 }
 
-export default BigButton;
+export default HeaderButton;

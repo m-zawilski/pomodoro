@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
+import Settings from './Components/Settings/Settings';
 
 class App extends Component {
 
@@ -41,19 +42,35 @@ class App extends Component {
 		this.pause();
 	}
 
+	openSettings = () => {
+		this.setState({isSettings: true});
+	}
+
+	closeSettings = (event) => {
+		this.setState({isSettings: false});
+	}
+
 	constructor() {
 		super();
 		this.state = {
 			timeSet: '2500',
 			clock: '2500',
-			isRunning: false
+			isRunning: false,
+			isSettings: false
 		}
 	}
 
   render() {
     return (
       <div>
-        <Header/>
+        <Settings
+        	isSettings={this.state.isSettings}
+        	closeSettings={this.closeSettings}
+        	test={this.test}
+        />
+        <Header
+        	openSettings={this.openSettings}
+        />
         <Body 
         	clock={this.state.clock}
         	play={this.play}

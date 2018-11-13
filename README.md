@@ -10,9 +10,15 @@ Todo (4/10):
 
 ✅ Basic styling
 
-❌ Notification about timer's end
+🏗 Settings (changing default timers)
 
-❌ Settings (changing default timers)
+	✅ Modal component (and all sub-components)
+
+	✅ Opening/Closing Modal
+
+	❌ Timer values change
+
+❌ Notification on timer's end
 
 ❌ 'About' section
 
@@ -22,5 +28,5 @@ Todo (4/10):
 
 ❌ Animations
 
-All images taken from www.svgrepo.com and adjusted thematically to the app under Creative Commons BY 4.0
+All images taken from www.svgrepo.com and adjusted thematically under Creative Commons BY 4.0
 https://creativecommons.org/licenses/by/4.0/
