@@ -46,8 +46,27 @@ class App extends Component {
 		this.setState({isSettings: true});
 	}
 
-	closeSettings = (event) => {
+	closeSettings = () => {
 		this.setState({isSettings: false});
+	}
+
+	//	Dehardcode it later
+	saveSettings = (value) => {
+		if (value.Pomodoro === 5){
+			this.state.settings.Pomodoro = '0' + value.Pomodoro + '00';
+		} else {
+			this.state.settings.Pomodoro = value.Pomodoro + '00';
+		}
+		if (value['Short Break'] === 5){
+			this.state.settings['Short Break'] = '0' + value['Short Break'] + '00';
+		} else {
+			this.state.settings['Short Break'] = value['Short Break'] + '00';
+		}
+		if (value['Long Break'] === 5){
+			this.state.settings['Long Break'] = '0' + value['Long Break'] + '00';
+		} else {
+			this.state.settings['Long Break'] = value['Long Break'] + '00';
+		}
 	}
 
 	constructor() {
@@ -56,7 +75,12 @@ class App extends Component {
 			timeSet: '2500',
 			clock: '2500',
 			isRunning: false,
-			isSettings: false
+			isSettings: false,
+			settings: {
+				Pomodoro: '2500',
+				'Short Break': '0500',
+				'Long Break': '1500'
+			}
 		}
 	}
 
@@ -66,6 +90,8 @@ class App extends Component {
         <Settings
         	isSettings={this.state.isSettings}
         	closeSettings={this.closeSettings}
+        	saveSettings={this.saveSettings}
+        	settings={this.state.settings}
         	test={this.test}
         />
         <Header
@@ -77,6 +103,7 @@ class App extends Component {
         	pause={this.pause}
         	reset={this.reset}
         	changeTime={this.changeTime}
+        	settings={this.state.settings}
         />
       </div>
     );

@@ -5,11 +5,12 @@ import PlayPauseBar from '../PlayPauseBar/PlayPauseBar';
 import PomodoroBreakBar from '../PomodoroBreakBar/PomodoroBreakBar';
 import Image from '../Image/Image';
 
-const Body = ({clock, play, pause, reset, changeTime}) => {
+const Body = ({clock, play, pause, reset, changeTime, settings}) => {
     return (
       	<div className="body">
       		<PomodoroBreakBar
             changeTime={changeTime}
+            settings={settings}
           />
           <Image/>
       		<Timer

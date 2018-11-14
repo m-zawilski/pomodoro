@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './BigButton.css';
 
-const BigButton = ({buttonType, changeTime, value}) => {
+const BigButton = ({buttonType, changeTime, value, color}) => {
     return (
       	<button 
-      		className='bigButton' 
+      		className={`bigButton ${color}`} 
       		type='button'
       		onClick={changeTime}
       		value={value}>

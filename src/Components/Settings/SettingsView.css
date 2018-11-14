@@ -1,14 +1,16 @@
 .settingsView {
 	height: 300px;
-	width: 200px;
+	width: 250px;
 	z-index: 1;
 	background-color: #070;
 	margin: auto auto;
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
+	justify-content: space-around;
 	padding: 1em;
 	box-shadow: #000 1px 1px 5px;
+	border-radius: 10%;
 }
 
 p {

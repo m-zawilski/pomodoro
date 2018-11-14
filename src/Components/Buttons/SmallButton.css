@@ -8,7 +8,11 @@
 
 .smallButton:hover {
 	animation: pound 3s infinite;
-	animation-delay: 1s;
+	animation-delay: 2s;
+}
+
+.smallButton:active {
+	transform: translateY(-2px);
 }
 
 @keyframes pound {

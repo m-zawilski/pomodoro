@@ -2,23 +2,26 @@ import React, { Component } from 'react';
 import './PomodoroBreakBar.css';
 import BigButton from '../Buttons/BigButton';
 
-const PomodoroBreakBar = ({changeTime}) => {
+const PomodoroBreakBar = ({changeTime, settings}) => {
     return (
       <div className='PomodoroBreakBar'>
         	<BigButton 
         		buttonType='Pomodoro'
         		changeTime={changeTime}
-                value={'2500'}
+                value={settings['Pomodoro']}
+                color='dark'
         	/>
         	<BigButton 
         		buttonType='Short Break'
         		changeTime={changeTime}
-                value={'0500'}
+                value={settings['Short Break']}
+                color='light'
         	/>
         	<BigButton 
         		buttonType='Long Break'
         		changeTime={changeTime}
-                value={'1500'}
+                value={settings['Long Break']}
+                color='dark'
         	/>
       </div>
     );
