@@ -1,0 +1,21 @@
+.headerButton {
+	padding: 1em;
+	margin: 0 .5em;
+	cursor: pointer;
+	background-color: #8b0000;
+	color: #fee;
+	font-size: .9em;
+	box-shadow: #411 1px 2px 3px;
+	border: none;
+	outline: none;
+	transition: all .2s;
+	border-radius: 20px;
+}
+
+.headerButton:hover {
+	background-color: #ad0000;
+}
+
+.headerButton:active {
+	transform: translateY(2px);
+}

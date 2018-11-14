@@ -4,7 +4,7 @@ import './HeaderButton.css';
 const HeaderButton = ({buttonType, onClick}) => {
     return (
       	<button 
-      		className='bigButton' 
+      		className='headerButton' 
       		type='button'
       		onClick={onClick}
       		>

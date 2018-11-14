@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import './Slider.css';
 
-const Slider = () => {
+const Slider = ({name, value, changeValue}) => {
   	return (
-        <div>
+        <div className='sliderContainer'>
+            <label 
+                className='label'
+            >
+                {name} - {value} min
+            </label>
             <input 
             	type='range' 
             	className='slider'
-            	min='1'
-            	max='100'
+                name={name}
+            	min='5'
+            	max='60'
+                step='5'
+                defaultValue={value}
+                onChange={changeValue}
             />
         </div>
     );

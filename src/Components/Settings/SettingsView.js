@@ -9,19 +9,43 @@ class SettingsView extends Component {
         event.stopPropagation();
     } 
 
+    changeValue = (event) => {
+        this.setState({[event.target.name]: event.target.value});
+    }
+
+    constructor() {
+        super();
+        this.state = {
+            Pomodoro: 25,
+            'Short Break': 5,
+            'Long Break': 10
+        }
+    }
+
     render() {
-        const {closeSettings} = this.props;
+        const {closeSettings, saveSettings} = this.props;
         return (
-            <div className='settingsView' onClick={this.stopPropagation}>
-                <p>Pomodoro</p>
-                <Slider/>
-                <p>Short Break</p>
-                <Slider/>
-                <p>Long Break</p>
-                <Slider/>
+            <div className='settingsView'>
+                <div onClick={this.stopPropagation}>
+                    <Slider
+                        name='Pomodoro'
+                        value={this.state.Pomodoro}
+                        changeValue={this.changeValue}
+                    />
+                    <Slider
+                        name='Short Break'
+                        value={this.state['Short Break']}
+                        changeValue={this.changeValue}
+                    />
+                    <Slider
+                        name='Long Break'
+                        value={this.state['Long Break']}
+                        changeValue={this.changeValue}
+                    />
+                </div>
                 <HeaderButton
                     buttonType='Accept'
-                    onClick={closeSettings}
+                    onClick={saveSettings(this.state)}
                 />
             </div>
         );

@@ -1,6 +1,6 @@
 Simple Pomodoro application created to practice my FrontEnd (React) skills.
 
-Todo (4/10):
+Todo (5/10):
 
 ✅ Aplication skeleton
 
@@ -10,13 +10,7 @@ Todo (4/10):
 
 ✅ Basic styling
 
-🏗 Settings (changing default timers)
-
-	✅ Modal component (and all sub-components)
-
-	✅ Opening/Closing Modal
-
-	❌ Timer values change
+✅ Settings (changing default timers)
 
 ❌ Notification on timer's end
 
@@ -24,9 +18,9 @@ Todo (4/10):
 
 ❌ Advanced styling
 
-❌ Private graphics
+❌ Private graphics & animations
 
-❌ Animations
+❌ Code refactoring
 
 All images taken from www.svgrepo.com and adjusted thematically under Creative Commons BY 4.0
 https://creativecommons.org/licenses/by/4.0/
