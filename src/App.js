@@ -52,17 +52,17 @@ class App extends Component {
 
 	//	Dehardcode it later
 	saveSettings = (value) => {
-		if (value.Pomodoro === 5){
+		if (value.Pomodoro == 5){
 			this.state.settings.Pomodoro = '0' + value.Pomodoro + '00';
 		} else {
 			this.state.settings.Pomodoro = value.Pomodoro + '00';
 		}
-		if (value['Short Break'] === 5){
+		if (value['Short Break'] == 5){
 			this.state.settings['Short Break'] = '0' + value['Short Break'] + '00';
 		} else {
 			this.state.settings['Short Break'] = value['Short Break'] + '00';
 		}
-		if (value['Long Break'] === 5){
+		if (value['Long Break'] == 5){
 			this.state.settings['Long Break'] = '0' + value['Long Break'] + '00';
 		} else {
 			this.state.settings['Long Break'] = value['Long Break'] + '00';
