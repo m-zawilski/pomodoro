@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Timer.css';
 
 const Timer = ({clock}) => {
+	const clockMinutes = (Math.floor(clock/60)).toString().padStart(2, '0');
+	const clockSeconds = (clock%60).toString().padStart(2, '0');
     return (
       <div className='timer'>
-      	{`${clock[0]}${clock[1]}:${clock[2]}${clock[3]}`}
+      	{`${clockMinutes[0]}${clockMinutes[1]}:` +
+      	`${clockSeconds[0]}${clockSeconds[1]}`}
       </div>
     );
 }

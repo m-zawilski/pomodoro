@@ -9,43 +9,36 @@ class SettingsView extends Component {
         event.stopPropagation();
     } 
 
-    changeValue = (event) => {
-        this.setState({[event.target.name]: event.target.value});
-    }
-
-    constructor() {
-        super();
-        this.state = {
-            Pomodoro: 25,
-            'Short Break': 5,
-            'Long Break': 10
-        }
-    }
-
     render() {
-        const {closeSettings, saveSettings} = this.props;
+        const {settings, changeValue, saveSettings } = this.props;
+        const settingsMinutes = settings.map((value) => {
+            return Math.floor(value/60);
+        })
         return (
-            <div className='settingsView'>
-                <div onClick={this.stopPropagation}>
+            <div className='settingsView' onClick={this.stopPropagation}>
+                <div>
                     <Slider
                         name='Pomodoro'
-                        value={this.state.Pomodoro}
-                        changeValue={this.changeValue}
+                        number={0}
+                        value={settingsMinutes[0]}
+                        changeValue={changeValue(0)}
                     />
                     <Slider
                         name='Short Break'
-                        value={this.state['Short Break']}
-                        changeValue={this.changeValue}
+                        number={1}
+                        value={settingsMinutes[1]}
+                        changeValue={changeValue(1)}
                     />
                     <Slider
                         name='Long Break'
-                        value={this.state['Long Break']}
-                        changeValue={this.changeValue}
+                        number={2}
+                        value={settingsMinutes[2]}
+                        changeValue={changeValue(2)}
                     />
                 </div>
                 <HeaderButton
                     buttonType='Accept'
-                    onClick={saveSettings(this.state)}
+                    onClick={saveSettings}
                 />
             </div>
         );

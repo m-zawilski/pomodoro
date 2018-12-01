@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './HeaderButton.css';
 
-const HeaderButton = ({buttonType, onClick}) => {
+const HeaderButton = ({buttonType, onClick, settings}) => {
     return (
       	<button 
       		className='headerButton' 
       		type='button'
       		onClick={onClick}
+      		value={settings}
       		>
       			{buttonType}
       		</button>

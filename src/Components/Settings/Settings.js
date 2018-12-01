@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Settings.css';
 import SettingsView from './SettingsView';
 
-const Settings = ({isSettings, closeSettings, saveSettings, test}) => {
-  	if (isSettings){
+const Settings = ( {isSettings, cancelSettings, settings, changeValue, saveSettings} ) => {
+    if (isSettings){
     	return (
-	      <div className='settingsModal on' onClick={closeSettings}>
-	      	<SettingsView
-	      		closeSettings={closeSettings}
+	      <div className='settingsModal on' onClick={cancelSettings}>
+	       	<SettingsView
+                settings={settings}
+                changeValue={changeValue}
                 saveSettings={saveSettings}
-                test={test}
 	      	/>
 	      </div>
     	);
     } else {
     	return (
 	      <div className='settingsModal off'>
-            <SettingsView
-                closeSettings={closeSettings}
-                saveSettings={saveSettings}
-                test={test}
-            />
           </div>
     	)
     }
