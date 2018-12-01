@@ -3,7 +3,7 @@ import './Header.css';
 import Logo from '../Logo/Logo';
 import HeaderButton from '../Buttons/HeaderButton';
 
-const Header = ({openSettings}) => {
+const Header = ({openSettings, openAbout}) => {
     return (
       <div className='header'>
         <Logo/>
@@ -14,6 +14,7 @@ const Header = ({openSettings}) => {
         	/>
         	<HeaderButton 
         		buttonType='About'
+                onClick={openAbout}
         	/>
         </div>
       </div>

@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
 import Settings from './Components/Settings/Settings';
+import About from './Components/About/About'
 
 class App extends Component {
 
@@ -46,6 +47,14 @@ class App extends Component {
 		this.setState({isSettings: false});
 	}
 
+	openAbout = () => {
+		this.setState({isAbout: true});
+	}
+
+	closeAbout = () => {
+		this.setState({isAbout: false});
+	}
+
 	cancelSettings = () => {
 		this.closeSettings();
 		const { previousSettings } = this.state;
@@ -71,17 +80,18 @@ class App extends Component {
 		this.state = {
 			isRunning: false,
 			isSettings: false,
+			isAbout: false,
 			settings: [1500, 300, 600],
 			clock: 1500,
 			option: 0,
 			interval: {},
 			previousSettings: [1500, 300, 600],
-			sound: new Audio('alarm.wav')
+			sound: new Audio('alarm.wav') || new Audio('alarm.mp3')
 		}
 	}
 
   render() {
-  	const { settings, isSettings, clock, sound } = this.state;
+  	const { settings, isSettings, clock, sound, isAbout } = this.state;
   	if (clock === 0) {
   		sound.play();
   	} else {
@@ -96,8 +106,13 @@ class App extends Component {
         	changeValue={this.changeValue}
         	saveSettings={this.saveSettings}
         />
+        <About 
+        	isAbout={isAbout}
+        	closeAbout={this.closeAbout}
+        />
         <Header
         	openSettings={this.openSettings}
+        	openAbout={this.openAbout}
         />
         <Body 
         	clock={clock}
