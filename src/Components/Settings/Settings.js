@@ -1,22 +1,22 @@
 import React from 'react';
 import './Settings.css';
 import SettingsView from './SettingsView';
+import Modal from '../Modal/Modal';
 
 const Settings = ( {isSettings, cancelSettings, settings, changeValue, saveSettings} ) => {
     if (isSettings){
     	return (
-	      <div className='settingsModal on' onClick={cancelSettings}>
+	      <Modal close={cancelSettings}>
 	       	<SettingsView
                 settings={settings}
                 changeValue={changeValue}
                 saveSettings={saveSettings}
 	      	/>
-	      </div>
+	      </Modal>
     	);
     } else {
     	return (
-	      <div className='settingsModal off'>
-          </div>
+	      null
     	)
     }
 }
