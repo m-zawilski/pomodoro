@@ -48,14 +48,14 @@ class App extends Component {
 
 	cancelSettings = () => {
 		this.closeSettings();
-		const { oldSettings } = this.state;
-		this.setState({settings: oldSettings});
+		const { previousSettings } = this.state;
+		this.setState({settings: previousSettings});
 	}
 
 	saveSettings = () => {
 		this.closeSettings();
 		const newSettings = this.state.settings;
-		this.setState({oldSettings: newSettings});
+		this.setState({previousSettings: newSettings});
 		this.reset();
 	}
 
@@ -75,12 +75,18 @@ class App extends Component {
 			clock: 1500,
 			option: 0,
 			interval: {},
-			oldSettings: [1500, 300, 600]
+			previousSettings: [1500, 300, 600],
+			sound: new Audio('alarm.wav')
 		}
 	}
 
   render() {
-  	const { settings, isSettings, clock } = this.state;
+  	const { settings, isSettings, clock, sound } = this.state;
+  	if (clock === 0) {
+  		sound.play();
+  	} else {
+  		sound.pause();
+  	}
     return (
       <div>
         <Settings
