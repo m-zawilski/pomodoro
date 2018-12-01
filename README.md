@@ -12,7 +12,7 @@ Todo (5/10):
 
 ✅ Settings (changing default timers)
 
-❌ Notification on timer's end
+✅ Notification on timer's end
 
 ❌ 'About' section
 
