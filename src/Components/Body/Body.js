@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Body.css';
 import Timer from '../Timer/Timer';
 import PlayPauseBar from '../PlayPauseBar/PlayPauseBar';
 import PomodoroBreakBar from '../PomodoroBreakBar/PomodoroBreakBar';
 import Image from '../Image/Image';
 
-const Body = ({clock, play, pause, reset, changeTime, settings}) => {
+const Body = ({clock, play, pause, reset, changeMode, settings}) => {
     return (
       	<div className="body">
       		<PomodoroBreakBar
-            changeTime={changeTime}
+            changeMode={changeMode}
             settings={settings}
           />
           <Image/>

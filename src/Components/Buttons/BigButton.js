@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './BigButton.css';
 
 const BigButton = ({buttonType, changeTime, value, color}) => {

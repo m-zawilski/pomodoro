@@ -7,38 +7,34 @@ import Settings from './Components/Settings/Settings';
 class App extends Component {
 
 	play = () => {
-		if (!this.isRunning){
-			this.interval = setInterval(this.runClock, 1000);	
-			this.isRunning=true;
-		}
+		if (!this.state.isRunning){
+			this.setState({interval: setInterval(this.runClock, 1000)});	
+			this.setState({isRunning: true});
+		} 
 	}
 
 	pause = () => {
-		clearInterval(this.interval);
-		this.isRunning=false;
+		clearInterval(this.state.interval);
+		this.setState({isRunning: false});
 	}
 
 	reset = () => {
-		this.setState({clock: this.state.timeSet});
+		const { settings, option } = this.state;
+		this.setState({clock: settings[option]});
 		this.pause();
 	}
 
 	runClock = () => {
-		let {clock} = this.state;
-		if (clock[0] !== '0' && clock[1] === '0' && clock[2] === '0' && clock[3] === '0'){
-			this.setState({clock: `${clock[0]-1}959`});
-		} else if (clock[1] !== '0' && clock[2] === '0' && clock[3] === '0'){
-			this.setState({clock: `${clock[0]}${clock[1]-1}59`});
-		} else if (clock[2] !== '0' && clock[3] === '0'){
-			this.setState({clock: `${clock[0]}${clock[1]}${clock[2]-1}9`});
-		} else if (clock[3] !== '0'){
-			this.setState({clock: `${clock[0]}${clock[1]}${clock[2]}${clock[3]-1}`});
-		} 
+		const {clock} = this.state;
+		if (clock !== 0){
+			this.setState({clock: clock-1});
+		}
 	}
 
-	changeTime = (event) => {
-		this.setState({timeSet: event.target.value});
-		this.setState({clock: event.target.value});
+	changeMode = (event) => {
+		const mode = event.target.value;
+		const { settings } = this.state;
+		this.setState({option: mode, clock: settings[mode]});
 		this.pause();
 	}
 
@@ -50,60 +46,60 @@ class App extends Component {
 		this.setState({isSettings: false});
 	}
 
-	//	Dehardcode it later
-	saveSettings = (value) => {
-		if (value.Pomodoro == 5){
-			this.state.settings.Pomodoro = '0' + value.Pomodoro + '00';
-		} else {
-			this.state.settings.Pomodoro = value.Pomodoro + '00';
-		}
-		if (value['Short Break'] == 5){
-			this.state.settings['Short Break'] = '0' + value['Short Break'] + '00';
-		} else {
-			this.state.settings['Short Break'] = value['Short Break'] + '00';
-		}
-		if (value['Long Break'] == 5){
-			this.state.settings['Long Break'] = '0' + value['Long Break'] + '00';
-		} else {
-			this.state.settings['Long Break'] = value['Long Break'] + '00';
-		}
+	cancelSettings = () => {
+		this.closeSettings();
+		const { oldSettings } = this.state;
+		this.setState({settings: oldSettings});
 	}
+
+	saveSettings = () => {
+		this.closeSettings();
+		const newSettings = this.state.settings;
+		this.setState({oldSettings: newSettings});
+		this.reset();
+	}
+
+ 	changeValue = (number) => (event) => {
+ 			const { value } = event.target;
+ 			const newSettings = JSON.parse(JSON.stringify(this.state.settings));
+ 			newSettings[number] = Number(value*60);
+      this.setState({settings: newSettings});
+  }
 
 	constructor() {
 		super();
 		this.state = {
-			timeSet: '2500',
-			clock: '2500',
 			isRunning: false,
 			isSettings: false,
-			settings: {
-				Pomodoro: '2500',
-				'Short Break': '0500',
-				'Long Break': '1500'
-			}
+			settings: [1500, 300, 600],
+			clock: 1500,
+			option: 0,
+			interval: {},
+			oldSettings: [1500, 300, 600]
 		}
 	}
 
   render() {
+  	const { settings, isSettings, clock } = this.state;
     return (
       <div>
         <Settings
-        	isSettings={this.state.isSettings}
-        	closeSettings={this.closeSettings}
+        	isSettings={isSettings}
+        	cancelSettings={this.cancelSettings}
+        	settings={settings}
+        	changeValue={this.changeValue}
         	saveSettings={this.saveSettings}
-        	settings={this.state.settings}
-        	test={this.test}
         />
         <Header
         	openSettings={this.openSettings}
         />
         <Body 
-        	clock={this.state.clock}
+        	clock={clock}
         	play={this.play}
         	pause={this.pause}
         	reset={this.reset}
-        	changeTime={this.changeTime}
-        	settings={this.state.settings}
+        	changeMode={this.changeMode}
+        	settings={settings}
         />
       </div>
     );
