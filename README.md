@@ -1,6 +1,6 @@
 Simple Pomodoro application created to practice my FrontEnd (React) skills.
 
-Todo (5/10):
+Todo (6/10):
 
 ✅ Aplication skeleton
 
