@@ -11,7 +11,7 @@ const Timer = ({clock}) => {
       </div>
     ) : (
     	<div className='timer'>
-    	KONIEC
+    	 END
     	</div>
     )
 }
