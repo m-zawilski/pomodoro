@@ -1,8 +1,8 @@
 Simple Pomodoro application created to practice my FrontEnd (React) skills.
 
-Todo (5/10):
+Todo (6/10):
 
-✅ Aplication skeleton
+✅ Application structure
 
 ✅ Basic functionality (Play, pause, reset)
 
@@ -14,7 +14,7 @@ Todo (5/10):
 
 ✅ Notification on timer's end
 
-❌ 'About' section
+🚧 'About' section
 
 ❌ Advanced styling
 

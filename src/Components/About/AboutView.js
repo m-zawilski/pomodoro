@@ -1,6 +1,8 @@
 import React from 'react';
 import './AboutView.css';
 
+
+//Change Lorem Ipsum to real text
 const AboutView = () => {
     return (
         <div className='aboutView'>
