@@ -82,7 +82,7 @@ class App extends Component {
 			isSettings: false,
 			isAbout: false,
 			settings: [1500, 300, 600],								//Pomodoro/Short Break/Long Break
-			clock: 1,																//all times are in seconds
+			clock: 1500,																//all times are in seconds
 			option: 0,
 			interval: {},
 			previousSettings: [1500, 300, 600],
