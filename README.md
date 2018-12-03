@@ -14,9 +14,9 @@ Todo (6/10):
 
 ✅ Notification on timer's end
 
-🚧 'About' section
+✅ 'About' section
 
-❌ Advanced styling
+🚧 Advanced styling
 
 ❌ Private graphics & animations
 

@@ -6,10 +6,25 @@ import './AboutView.css';
 const AboutView = () => {
     return (
         <div className='aboutView'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>The Pomodoro Technique is a time management method
+            developed by Francesco Cirillo in the late 1980s.
+            The technique uses a timer to break down work into intervals, 
+            aditionally 25 minutes in length, separated by short breaks. 
+            These intervals are named pomodoros, the anglicized plural of 
+            the Italian word pomodoro (tomato), after the tomato-shaped 
+            kitchen timer that Cirillo used as a university student.</p>
+            <h2>How to pomodoro efficiently?</h2>
+            <ol>
+            	<li>Decide on the task to be done.</li>
+            	<li>Set the pomodoro timer (traditionally: 25 minutes).</li>
+            	<li>Work on the task.</li>
+            	<li>End work when the timer rings and one to your pomodoro count.</li>
+            	<li>If your pomodoro count is not divisible by four, 
+            	take a short break (3-5 minutes) and go back to step 2.</li>
+            	<li>If your pomodoro count is divisible by four, take a longer
+            	break (15-30 minutes) and go back to step 1.</li>
+            </ol>
+						<h2>Click somewhere to go back</h2>
         </div>
     );
 }
