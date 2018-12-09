@@ -1,7 +1,7 @@
 .smallButton {
-	width: 50px;
-	height: 50px;
-	margin: .3em;
+	width: 70px;
+	height: 70px;
+	margin: .5em;
 	outline: none;
 	transition: all .2s;
 }

@@ -1,9 +1,9 @@
 .aboutView {
-	height: 90vh;
-	width: 55vw;
 	z-index: 1;
 	background-color: #070;
 	margin: auto auto;
+	width: 50vw;
+	height: 80vh;
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
@@ -11,11 +11,13 @@
 	padding: 1em 3em;
 	box-shadow: #000 1px 1px 5px;
 	border-radius: 10%;
-	font-size: 100%;
 }
 
-.aboutView > p {
-	text-align: justify;
+article {	
+	display: flex;
+	padding: 1em 2em;
+	flex-direction: column;
+	overflow: auto;
 	-webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -25,43 +27,26 @@
                                   supported by Chrome and Opera */
 }
 
-.aboutView > h2 {
+article p {
+	text-align: justify;
 	margin: 0;
 }
 
-.aboutView > ol {
-	margin: 0;
+article h2 {
+	font-size: 3vw;
+	text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
-	.aboutView {
-		font-size: 90%;
-	}
-}
-
-@media only screen and (max-width: 550px) {
-	.aboutView > h2 {
-		font-size: 1.2em;
-	}
-}
-
-@media only screen and (max-width: 450px) {
-	.aboutView {
-		font-size: 85%;
+@media only screen and (max-width: 600px){
+	article {
+		padding-left: 0;
 	}
 
-	.aboutView > h2 {
-		font-size: 1.1em;
-	}
-}
-
-@media only screen and (max-width: 400px) {
-	.aboutView {
-		font-size: 80%;
-		height: 90vh;
+	article p {
+		text-align: left;
 	}
 
-	.aboutView > h2 {
-		font-size: 1em;
+	article h2 {
+		font-size: 5vw;
 	}
 }
