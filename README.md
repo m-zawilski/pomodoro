@@ -18,9 +18,6 @@ Todo (6/10):
 
 🚧 Advanced styling
 
-❌ Private graphics & animations
+🚧 Private graphics & animations
 
 ❌ Code refactoring
-
-All images taken from www.svgrepo.com and adjusted thematically under Creative Commons BY 4.0
-https://creativecommons.org/licenses/by/4.0/
