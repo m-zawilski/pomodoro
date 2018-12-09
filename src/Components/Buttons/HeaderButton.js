@@ -1,16 +1,14 @@
 import React from 'react';
 import './HeaderButton.css';
 
-const HeaderButton = ({buttonType, onClick, settings}) => {
+const HeaderButton = ({buttonType, onClick}) => {
     return (
-      	<button 
+      	<img 
       		className='headerButton' 
-      		type='button'
       		onClick={onClick}
-      		value={settings}
-      		>
-      			{buttonType}
-      		</button>
+          src={`${buttonType}.svg`}
+          alt={`${buttonType} button`}>
+        </img>
     );
 }
 

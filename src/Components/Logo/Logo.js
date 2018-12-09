@@ -3,8 +3,8 @@ import './Logo.css';
 
 const Logo =  () => {
     return (
-      <div>
-      	<h1 className='logo'><img alt='Logo' src='tomato.svg' className='logoImage'/>POMODORO!</h1>
+      <div className='logoContainer'>
+      	<img alt='Logo' src='logo.svg' className='logoImage'/>
       </div>
     );
 }

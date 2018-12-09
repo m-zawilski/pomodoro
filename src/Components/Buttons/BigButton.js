@@ -1,15 +1,15 @@
 import React from 'react';
 import './BigButton.css';
 
-const BigButton = ({buttonType, changeTime, value, color}) => {
+const BigButton = ({buttonType, changeMode, value}) => {
     return (
-      	<button 
-      		className={`bigButton ${color}`} 
+      	<img 
+      		className={`bigButton`} 
       		type='button'
-      		onClick={changeTime}
-      		value={value}>
-      			{buttonType}
-      		</button>
+      		onClick={changeMode}
+      		value={value}
+      		src={`${''+buttonType}.svg`}
+      		alt={`${buttonType} button`}/>
     );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './SettingsView.css';
-import HeaderButton from '../Buttons/HeaderButton';
+import AcceptButton from '../Buttons/AcceptButton';
 import Slider from '../Slider/Slider';
 
 const SettingsView = ( {settings, changeValue, saveSettings} ) => {
@@ -29,7 +29,7 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     changeValue={changeValue(2)}
                 />
             </div>
-            <HeaderButton
+            <AcceptButton
                 buttonType='Accept'
                 onClick={saveSettings}
             />

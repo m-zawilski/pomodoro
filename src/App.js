@@ -33,7 +33,7 @@ class App extends Component {
 	}
 
 	changeMode = (event) => {
-		const mode = event.target.value;
+		const mode = event.currentTarget.getAttribute('value');
 		const { settings } = this.state;
 		this.setState({option: mode, clock: settings[mode]});
 		this.pause();

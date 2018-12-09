@@ -7,22 +7,18 @@ const PomodoroBreakBar = ({changeMode, settings}) => {
       <div className='PomodoroBreakBar'>
         	<BigButton 
         		buttonType='Pomodoro'
-        		changeTime={changeMode}
+        		changeMode={changeMode}
                 value={0}
-                color='dark'
         	/>
         	<BigButton 
         		buttonType='Short Break'
-        		changeTime={changeMode}
+        		changeMode={changeMode}
                 value={1}
-                color='light'
         	/>
         	<BigButton 
         		buttonType='Long Break'
-                number={2}
-        		changeTime={changeMode}
+        		changeMode={changeMode}
                 value={2}
-                color='dark'
         	/>
       </div>
     );
