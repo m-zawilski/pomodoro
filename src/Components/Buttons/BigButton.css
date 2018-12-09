@@ -1,24 +1,9 @@
 .bigButton {
-	padding: 1em;
-	margin: 0 .5em;
+	padding: .5em;
 	cursor: pointer;
-	color: #fee;
-	font-size: .9em;
-	box-shadow: #411 1px 2px 3px;
-	border: none;
-	outline: none;
 	transition: all .3s;
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-}
-
-.dark {
-	background-color: #9c0000;
-}
-
-.light {
-	background-color: #ad0000;
+	width: 120px;
+	height: 120px;
 }
 
 .bigButton:hover {
@@ -27,4 +12,12 @@
 
 .bigButton:active {
 	transform: scale(1.1) rotate(-10deg);
+}
+
+@media only screen and (max-width: 400px) {
+	.bigButton {
+		width: 90px;
+		height: 90px;
+		padding: .3em;
+	}
 }
