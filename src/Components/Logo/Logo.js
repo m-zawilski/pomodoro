@@ -5,7 +5,7 @@ const Logo =  () => {
     return (
       <div className='logoContainer'>
       	<a href='.'>
-      	<img alt='Logo' src='./img/logo.svg' className='logoImage'/>
+      	<img alt='Logo' src='./img/Logo.svg' className='logoImage'/>
       	</a>
       </div>
     );
