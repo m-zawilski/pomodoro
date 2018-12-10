@@ -3,6 +3,38 @@
 	margin: 10px;
 }
 
+.slider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 10px;
+  border-radius: 5px;   
+  background: #ddd;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  border: 1px solid #000;
+  background: #c10000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #c10000;
+  cursor: pointer;
+}
+
 .label {
 	margin: 10px;
 	display: block;

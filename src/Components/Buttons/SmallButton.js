@@ -6,7 +6,7 @@ const Button = ({buttonType, onClick}) => {
       	<img
       		className='smallButton'
       		onClick={onClick}
-      		src={`${buttonType}.svg`}
+      		src={`./img/${buttonType}.svg`}
       		alt={`${buttonType} button`}>
       	</img>
     );
