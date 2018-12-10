@@ -13,7 +13,7 @@
 	border-radius: 10%;
 }
 
-p {
+.settingsView p {
 	margin-bottom: 8px;
 	-webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

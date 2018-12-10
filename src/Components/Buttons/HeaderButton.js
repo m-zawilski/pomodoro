@@ -6,7 +6,7 @@ const HeaderButton = ({buttonType, onClick}) => {
       	<img 
       		className='headerButton' 
       		onClick={onClick}
-          src={`${buttonType}.svg`}
+          src={`./img/${buttonType}.svg`}
           alt={`${buttonType} button`}>
         </img>
     );

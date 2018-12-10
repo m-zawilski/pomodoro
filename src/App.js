@@ -86,12 +86,12 @@ class App extends Component {
 			option: 0,
 			interval: {},
 			previousSettings: [1500, 300, 600],
-			sound: new Audio('alarm.wav') || new Audio('alarm.mp3')
+			sound: new Audio('./sounds/alarm.wav') || new Audio('./sounds/alarm.mp3')
 		}
 	}
 
   render() {
-  	const { settings, isSettings, clock, sound, isAbout } = this.state;
+  	const { settings, isSettings, clock, sound, isAbout, option } = this.state;
   	if (clock === 0) {
   		sound.play();
   	} else {
@@ -121,6 +121,7 @@ class App extends Component {
         	reset={this.reset}
         	changeMode={this.changeMode}
         	settings={settings}
+        	currentMode={option}
         />
       </div>
     );

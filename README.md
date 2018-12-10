@@ -16,7 +16,7 @@ Todo (7/10):
 
 ✅ 'About' section
 
-🚧 Advanced styling
+✅ Advanced styling
 
 🚧 Private graphics & animations
 
