@@ -79,13 +79,17 @@ class App extends Component {
 
 	constructor() {
 		super();
+		let clock = null;
+		const lsSettings = JSON.parse(localStorage.getItem('pomodoroSettings'));
+		if(lsSettings !== null) {
+			clock = lsSettings[0];
+		}
 		this.state = {
 			isRunning: false,
 			isSettings: false,
 			isAbout: false,
-			settings: JSON.parse(localStorage.getItem('pomodoroSettings')) 
-								|| [1500, 300, 600], //Pomodoro/Short Break/Long Break
-			clock: JSON.parse(localStorage.getItem('pomodoroSettings'))[0] || 1500,															//all times are in seconds
+			settings: lsSettings || [1500, 300, 600], //Pomodoro/Short Break/Long Break
+			clock: clock || 1500,															//all times are in seconds
 			option: JSON.parse(localStorage.getItem('pomodoroOption'))
 							 || 0,
 			interval: {},
