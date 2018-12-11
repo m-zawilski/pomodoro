@@ -9,7 +9,7 @@
 	align-items: center;
 	justify-content: space-around;
 	padding: 1em;
-	box-shadow: #000 1px 1px 5px;
+	border: 1.5px solid #222;
 	border-radius: 10%;
 }
 
