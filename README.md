@@ -20,4 +20,4 @@ Todo (9/10):
 
 ✅ Private graphics & animations
 
-❌ Code refactoring
+🏗 Code refactoring
