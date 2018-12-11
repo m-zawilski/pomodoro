@@ -1,6 +1,6 @@
 Simple Pomodoro application created to practice my FrontEnd (React) skills.
 
-Check it out: https://m-zawilski.github.io/pomodoro/ !
+Check it out: https://m-zawilski.github.io/pomodoro/
 
 
 Todo (9/10):
