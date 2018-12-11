@@ -19,7 +19,7 @@ const AboutView = () => {
                 	<li>Decide on the task to be done.</li>
                 	<li>Set the pomodoro timer (traditionally: 25 minutes).</li>
                 	<li>Work on the task.</li>
-                	<li>End work when the timer rings and one to your pomodoro count.</li>
+                	<li>End work when the timer rings and add one to your pomodoro count.</li>
                 	<li>If your pomodoro count is not divisible by four, 
                 	take a short break (3-5 minutes) and go back to step 2.</li>
                 	<li>If your pomodoro count is divisible by four, take a longer

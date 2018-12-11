@@ -16,6 +16,9 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     value={settingsMinutes[0]}
                     changeValue={changeValue(0)}
                     className='slider'
+                    maxValue='60'
+                    minValue='10'
+                    step='5'
                 />
                 <Slider
                     name='Short Break'
@@ -23,6 +26,9 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     value={settingsMinutes[1]}
                     changeValue={changeValue(1)}
                     className='slider'
+                    maxValue='15'
+                    minValue='1'
+                    step='1'
                 />
                 <Slider
                     name='Long Break'
@@ -30,6 +36,9 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     value={settingsMinutes[2]}
                     changeValue={changeValue(2)}
                     className='slider'
+                    maxValue='45'
+                    minValue='10'
+                    step='5'
                 />
             </div>
             <AcceptButton
