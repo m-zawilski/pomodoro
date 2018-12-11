@@ -65,6 +65,8 @@ class App extends Component {
 		this.closeSettings();
 		const newSettings = this.state.settings;
 		this.setState({previousSettings: newSettings});
+		localStorage.setItem('pomodoroSettings', JSON.stringify(newSettings));
+		localStorage.setItem('pomodoroOption', JSON.stringify(this.state.option));
 		this.reset();
 	}
 
@@ -81,9 +83,11 @@ class App extends Component {
 			isRunning: false,
 			isSettings: false,
 			isAbout: false,
-			settings: [1500, 300, 600],								//Pomodoro/Short Break/Long Break
-			clock: 1500,																//all times are in seconds
-			option: 0,
+			settings: JSON.parse(localStorage.getItem('pomodoroSettings')) 
+								|| [1500, 300, 600], //Pomodoro/Short Break/Long Break
+			clock: 1500,															//all times are in seconds
+			option: JSON.parse(localStorage.getItem('pomodoroOption'))
+							 || 0,
 			interval: {},
 			previousSettings: [1500, 300, 600],
 			sound: new Audio('./sounds/alarm.wav') || new Audio('./sounds/alarm.mp3')
