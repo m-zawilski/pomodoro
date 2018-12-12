@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../Logo/Logo';
-import HeaderButton from '../Buttons/HeaderButton';
+import Logo from './Logo/Logo';
+import HeaderButton from '../UI/Buttons/HeaderButton';
 
 const Header = ({openSettings, openAbout}) => {
     return (

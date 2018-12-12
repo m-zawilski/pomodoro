@@ -13,40 +13,33 @@
 	border-radius: 10%;
 }
 
-article {	
+.aboutView article {	
 	display: flex;
 	padding: 1em 2em;
 	flex-direction: column;
 	overflow: auto;
-	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
 }
 
-article p {
+.aboutView p {
 	text-align: justify;
 	margin: 0;
 }
 
-article h2 {
+.aboutView h2 {
 	font-size: 3vw;
 	text-align: center;
 }
 
 @media only screen and (max-width: 600px){
-	article {
+	.aboutView article {
 		padding-left: 0;
 	}
 
-	article p {
+	.aboutView p {
 		text-align: left;
 	}
 
-	article h2 {
+	.aboutView h2 {
 		font-size: 5vw;
 	}
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import './SettingsView.css';
-import AcceptButton from '../Buttons/AcceptButton';
+import './View.css';
+import AcceptButton from '../../UI/Buttons/AcceptButton';
 import Slider from '../Slider/Slider';
 
 const SettingsView = ( {settings, changeValue, saveSettings} ) => {
@@ -37,7 +37,7 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     changeValue={changeValue(2)}
                     className='slider'
                     maxValue='45'
-                    minValue='10'
+                    minValue='5'
                     step='5'
                 />
             </div>

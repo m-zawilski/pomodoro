@@ -1,9 +1,9 @@
 .bigButton {
-	padding: .5em;
+	padding: 0 .5em;
 	cursor: pointer;
 	transition: all .3s;
 	width: 120px;
-	height: 120px;
+	height: 130px;
 }
 
 .bigButton:hover {
@@ -16,8 +16,7 @@
 
 @media only screen and (max-width: 400px) {
 	.bigButton {
-		width: 90px;
+		width: 85px;
 		height: 90px;
-		padding: .3em;
 	}
 }

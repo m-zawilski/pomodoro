@@ -1,6 +1,5 @@
 import React from 'react';
-import './Settings.css';
-import SettingsView from './SettingsView';
+import SettingsView from './View';
 import Modal from '../Modal/Modal';
 
 const Settings = ( {isSettings, cancelSettings, settings, changeValue, saveSettings} ) => {
