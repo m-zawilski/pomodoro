@@ -37,7 +37,7 @@ const SettingsView = ( {settings, changeValue, saveSettings} ) => {
                     changeValue={changeValue(2)}
                     className='slider'
                     maxValue='45'
-                    minValue='10'
+                    minValue='5'
                     step='5'
                 />
             </div>

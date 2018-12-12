@@ -8,7 +8,7 @@ const BigButton = ({buttonType, changeMode, value}) => {
       		type='button'
       		onClick={changeMode}
       		value={value}
-      		src={`./img/${''+buttonType}.svg`}
+      		src={`./img/${buttonType}.png`}
       		alt={`${buttonType} button`}/>
     );
 }
