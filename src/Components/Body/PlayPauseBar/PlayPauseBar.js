@@ -1,6 +1,6 @@
 import React from 'react';
 import './PlayPauseBar.css';
-import SmallButton from '../Buttons/SmallButton';
+import SmallButton from '../../UI/Buttons/SmallButton';
 
 const PlayPauseBar =  ({play, pause, reset}) => {
     return (

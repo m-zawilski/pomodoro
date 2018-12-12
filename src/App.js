@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
-import Settings from './Components/Settings/Settings';
-import About from './Components/About/About'
+import Settings from './Components/Modals/Settings/Settings';
+import About from './Components/Modals/About/About'
 
 class App extends Component {
 
@@ -93,7 +93,7 @@ class App extends Component {
 			option: 0,
 			interval: {},
 			previousSettings: [1500, 300, 600],
-			sound: new Audio('./sounds/alarm.wav') || new Audio('./sounds/alarm.mp3')
+			sound: new Audio('./sounds/alarm.mp3')
 		}
 	}
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Body.css';
-import Timer from '../Timer/Timer';
-import PlayPauseBar from '../PlayPauseBar/PlayPauseBar';
-import PomodoroBreakBar from '../PomodoroBreakBar/PomodoroBreakBar';
-import Image from '../Image/Image';
+import Timer from './Timer/Timer';
+import PlayPauseBar from './PlayPauseBar/PlayPauseBar';
+import PomodoroBreakBar from './PomodoroBreakBar/PomodoroBreakBar';
+import Image from './Image/Image';
 
 const Body = ({clock, play, pause, reset, changeMode, settings, currentMode}) => {
     return (

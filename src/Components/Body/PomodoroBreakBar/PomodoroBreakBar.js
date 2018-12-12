@@ -1,6 +1,6 @@
 import React from 'react';
 import './PomodoroBreakBar.css';
-import BigButton from '../Buttons/BigButton';
+import BigButton from '../../UI/Buttons/BigButton';
 
 const PomodoroBreakBar = ({changeMode, settings}) => {
     return (

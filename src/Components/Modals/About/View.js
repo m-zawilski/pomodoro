@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutView.css';
+import './View.css';
 
 
 //Change Lorem Ipsum to real text

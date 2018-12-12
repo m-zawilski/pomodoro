@@ -1,6 +1,6 @@
 import React from 'react';
-import './SettingsView.css';
-import AcceptButton from '../Buttons/AcceptButton';
+import './View.css';
+import AcceptButton from '../../UI/Buttons/AcceptButton';
 import Slider from '../Slider/Slider';
 
 const SettingsView = ( {settings, changeValue, saveSettings} ) => {
